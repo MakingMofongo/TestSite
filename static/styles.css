@@ -1,0 +1,9 @@
+.expandable-section {
+    transition: max-height 0.8s ease-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.expandable-section.expanded {
+    max-height: 500px; /* Adjust this value according to your needs */
+}
