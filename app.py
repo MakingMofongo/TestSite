@@ -122,7 +122,7 @@ def collect_article():
         'narrative_consistency_result_verdict': None,
         'narrative_consistency_result_details': None,
         'bard_analysis_result': None,
-        'total_score': None,  # Add this line
+        'scores': None,  # Add this line
     }
     data = pd.read_csv('outputs.csv')
     # print(data)
@@ -152,6 +152,7 @@ def collect_article():
 @app.route('/get_scores')
 def get_scores():
     # Assuming article_details is globally accessible
+    print(article_details['scores'])
     return jsonify(article_details['scores'])
 if __name__ == '__main__':
     app.run(debug=True)
